@@ -7,8 +7,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-
-
 body {
   width: 100vw;
   height: 100vh;
@@ -20,6 +18,15 @@ body {
 
 button {
   cursor: pointer;
+  
+}
+
+td button i {
+  font-size: 20px!important;
+}
+
+td button i:first-child {
+  margin-right: 0;
 }
 
 .container {
@@ -28,6 +35,7 @@ button {
   border-radius: 10px;
   background: white;
 }
+
 
 .header {
   min-height: 70px;
@@ -43,7 +51,7 @@ button {
   word-break: break-all;
 }
 
-#new {
+#newUser {
   font-size: 16px;
   padding: 8px;
   border-radius: 5px;
@@ -58,6 +66,27 @@ button {
   height:inherit; 
   overflow:auto;
 }
+  table {
+    width: 100%;
+    border-spacing: 10px;
+    word-break: break-all;
+    border-collapse: collapse;
+  }
+  
+    thead {
+      background-color: whitesmoke;
+    }
+    thead tr th {
+      padding: 5px;
+      text-align: start;
+      margin-bottom: 50px;  
+    }
+    thead tr th.acao {
+      width: 100px!important;
+      text-align: center;
+    }
+  
+  
 
 .divTable::-webkit-scrollbar {
   width: 12px;
@@ -69,19 +98,17 @@ button {
   background-color: darkgray; 
 }
 
-table {
-  width: 100%;
-  border-spacing: 10px;
-  word-break: break-all;
-  border-collapse: collapse;
-}
 
-thead {
-  background-color: whitesmoke;
-}
+
+
+
 
 tr {
   border-bottom: 1px solid rgb(238, 235, 235)!important;
+ 
+}
+tbody tr {
+  margin-bottom: 50px;
 }
 
 tbody tr td {
@@ -90,26 +117,11 @@ tbody tr td {
   max-width: 50px;
 }
 
-thead tr th {
-  padding: 5px;
-  text-align: start;
-  margin-bottom: 50px;
-}
-
-tbody tr {
-  margin-bottom: 50px;
-}
-
-thead tr th.acao {
-  width: 100px!important;
-  text-align: center;
-}
-
 tbody tr td.acao {
   text-align: center;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   body {
     font-size: 10px;
   }
@@ -118,7 +130,7 @@ tbody tr td.acao {
     font-size: 15px;
   }
 
-  #new {
+  #newUser {
     padding: 5px;
     font-size: 10px;
   }
@@ -127,13 +139,7 @@ tbody tr td.acao {
     width: auto!important;
   }
   
-  td button i {
-    font-size: 20px!important;
-  }
-
-  td button i:first-child {
-    margin-right: 0;
-  }
+ 
 
   .modal {
     width: 90%!important;
@@ -143,6 +149,7 @@ tbody tr td.acao {
     font-size: 12px!important;
   }
 }
+
 
 .modal-container {
   width: 100vw;
@@ -156,7 +163,6 @@ tbody tr td.acao {
   align-items: center;
   justify-content: center;
 }
-
 .modal {
   display: flex;
   flex-direction: column;
@@ -166,64 +172,64 @@ tbody tr td.acao {
   border-radius: 10px;
   width: 50%;
 }
-
-.modal label {
-  font-size: 14px;
-  width: 100%;
-}
-
-.modal input {
-  width: 100%;
-  outline: none;
-  padding: 5px 10px; 
-  width: 100%;
-  margin-bottom: 20px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-
-.modal button {
-  width: 100%;
-  margin: 10px auto;
-  outline: none;
-  border-radius: 20px; 
-  padding: 5px 10px; 
-  width: 100%;
-  border: none;
-  background-color: rgb(57, 57, 226);
-  color: white;
-}
-
-.active {
-  display: flex;
-}
-
-.active .modal {
-  animation: modal .4s;
-}
-
-@keyframes modal {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -60px, 0);
+  .modal label {
+    font-size: 14px;
+    width: 100%;
   }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
+
+  .modal input {
+    width: 100%;
+    outline: none;
+    padding: 5px 10px; 
+    width: 100%;
+    margin-bottom: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
   }
-}
+  
+  .modal button {
+    width: 100%;
+    margin: 10px auto;
+    outline: none;
+    border-radius: 20px; 
+    padding: 5px 10px; 
+    width: 100%;
+    border: none;
+    background-color: rgb(57, 57, 226);
+    color: white;
+  }
+
+  @keyframes modal {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -60px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .active {
+    display: flex;
+   
+  }
+  .active .modal {
+    animation: modal .4s;
+  }
+
 
 td button {
   border: none;
   outline: none;
   background: transparent;
+  
+  
+  
 }
-
 td button i {
   font-size: 25px;
 }
-
 td button i:first-child {
   margin-right: 10px;
 }
