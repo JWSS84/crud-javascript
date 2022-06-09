@@ -114,7 +114,7 @@ tbody tr {
 tbody tr td {
   vertical-align: text-top;
   padding: 6px;
-  max-width: 50px;
+  max-width: 150px;
 }
 
 tbody tr td.acao {
@@ -136,20 +136,38 @@ tbody tr td.acao {
   }
 
   thead tr th.acao {
-    width: auto!important;
+    width: auto;
   }
   
  
 
   .modal {
-    width: 90%!important;
+    width: 90%;
   }
 
   .modal label {
-    font-size: 12px!important;
+    font-size: 12px;
   }
 }
 
+@media (max-width: 426px) {
+
+  .header{
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto 12px;
+  }
+  #new {
+    font-size: 14px;
+    padding: 4px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: rgb(108, 163, 122);
+}
+}
 
 .modal-container {
   width: 100vw;
