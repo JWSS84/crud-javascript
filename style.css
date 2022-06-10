@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  
 }
 
 body {
@@ -57,7 +58,7 @@ td button i:first-child {
   border-radius: 5px;
   border: none;
   color: white;
-  background-color: rgb(57, 57, 226);
+  background-color: rgb(108, 163, 122);
 }
 
 .divTable {
@@ -214,7 +215,7 @@ tbody tr td.acao {
     padding: 5px 10px; 
     width: 100%;
     border: none;
-    background-color: rgb(57, 57, 226);
+    background-color: rgb(108, 163, 122);
     color: white;
   }
 
@@ -251,3 +252,29 @@ td button i {
 td button i:first-child {
   margin-right: 10px;
 }
+
+@media (min-width: 375px) and (max-width: 426px){
+  thead tr th.acao {
+    width: 50px!important;
+    text-align: center;
+}
+#salario{
+  width: 60px;
+}
+
+
+tbody tr td {
+    /* vertical-align: text-top;
+    padding: 6px;
+    max-width: 150px; */
+    max-width: 100px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+   overflow: hidden;  
+
+}
+
+}
+
+   
+
